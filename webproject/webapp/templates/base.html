@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+{% block title %}
+
+{% endblock %}
+</head>
+<body>
+   
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+          <font size = "5">BasicTutorial </font>
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item"้ href="/">
+              หน้าแรก
+            </a>
+      
+            <a class="navbar-item" href="/form">
+              แบบฟอร์มบันทึกข้อมูล
+            </a>
+
+            <a class="navbar-item" href="/about">
+                เกี่ยวกับเรา
+            </a>
+
+            <a class="navbar-item" href="/admin">
+                Admin
+            </a>
+      
+        
+        </div>
+      </nav>
+      
+    <div class="container mt-2">
+    {% block content %}
+
+    {% endblock %}
+    </div>
+</body>
+</html>

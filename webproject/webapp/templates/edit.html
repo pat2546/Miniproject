@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+    {% block title %}
+        <title>แบบฟอร์มบันทึกข้อมูล</title>
+    {% endblock %}
+    {% block content %}
+        <h1 style="color: rgb(123, 0, 255); text-align: center; font-size: 30px;">แบบฟอร์มแก้ไขข้อมูล</h1>
+            <form method="post" action="">
+                {% csrf_token %}
+        <form>
+            <div class="field">
+                <label class="label">ชื่อ</label>
+                <div class="control">
+                    <input class="input" type="text" name="name" value="{{person.name}}" placeholder="Enter your name">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">อายุ</label>
+                <div class="control">
+                    <input class="input" type="number" name="age" value="{{person.age}}" placeholder="Enter your age">
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Update</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link is-light">cencel</button>
+                </div>
+            </div>
+        </form>
+    {% endblock %}
